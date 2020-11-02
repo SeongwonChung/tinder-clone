@@ -4,11 +4,11 @@ sudo: required
 services: 
     - docker
 
-before_install:
-    - docker build -t syc1013/tinder-clone -f Dockerfile.dev .
+# before_install:
+#     - docker build -t syc1013/tinder-clone -f Dockerfile.dev .
 
-script: 
-    - docker run -e CI=true syc1013/tinder-clone npm run test
+# script: 
+#     - docker run -e CI=true syc1013/tinder-clone npm run test
 deploy:
     provider: elasticbeanstalk
     region: "ap-northeast-2"
